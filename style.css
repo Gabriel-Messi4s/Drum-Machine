@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kablammo&display=swap");
+html {
+  font-size: 10px;
+  background: url("./john-matychuk-gUK3lA3K7Yo-unsplash.jpg") bottom center;
+  background-size: cover;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.overlay {
+  background: rgba(0, 0, 0, 0.7);
+}
+img {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  filter: invert(100);
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 100px;
+  font-family: "Kablammo", cursive;
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.7) 32%,
+    hwb(0 100% 0% / 0.3) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h3,
+p {
+  padding-left: 30px;
+}
+
+h3 {
+  font-size: 40px;
+  color: white;
+}
+
+p {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.keys {
+  display: flex;
+  flex: 1;
+  min-height: 10vh;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.key {
+  border: 0.4rem solid black;
+  border-radius: 0.8rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem 0.5rem;
+  transition: all 0.07s ease;
+  width: 10rem;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  text-shadow: 0 0 0.5rem black;
+  cursor: pointer;
+}
+.key:hover {
+  filter: invert(1);
+}
+.hero-header {
+  height: 70vh;
+}
+.hero {
+  padding: 20px 0;
+  border-radius: 5px;
+  width: 95%;
+  margin: auto auto;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero p {
+  width: 320px;
+  min-height: 250px;
+  line-height: 3rem;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* scale: 0.95; */
+  padding: 21px;
+}
+.playing {
+  transform: scale(1.3);
+  border-color: #ffc600;
+  box-shadow: 0 0 1rem #ffc600;
+}
+
+kbd {
+  display: block;
+  font-size: 4rem;
+}
+
+.sound {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #ffc600;
+}
+
+.logo {
+  float: left;
+  margin: 16px 36px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: purple; */
+}
+
+nav ul {
+  list-style: none;
+  background: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  color: #fff;
+  padding: 48px;
+  text-align: center;
+  margin: 0;
+  transition: 0.5s;
+  justify-content: space-around;
+}
+
+nav ul li:hover {
+  color: #ffc600;
+  transition: ease-in 0.5s;
+}
+
+.contact {
+  border: 2px solid rgb(0, 255, 34);
+  border-radius: 10px;
+  padding: 8px 12px;
+  background: #1a974e;
+  cursor: pointer;
+  transition: .2s;
+}
+.contact:hover {
+  color: #00ff00;
+  transform: scale(1.05);
+  border: none;
+  box-shadow: 0 0 15px, 0 0 8px white;
+}
+
+.contact:active {
+  transform: scale(0.75);
+  transition: .2s;
+}
+
+nav.black ul {
+  background: #000;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+}
+
+/*Menu icon CSS*/
+.menu-icon {
+  width: 100%;
+  background: #000;
+  text-align: right;
+  box-sizing: border-box;
+  padding: 15px 24px;
+  cursor: pointer;
+  color: #fff;
+  display: none;
+}
+
+/*Responsive design CSS*/
+@media (max-width: 580px) {
+  .logo {
+    position: fixed;
+    top: 0;
+    margin-top: 16px;
+  }
+
+  nav ul {
+    max-height: 0px;
+    background: #000;
+  }
+
+  nav.black ul {
+    background: #000;
+  }
+
+  .showing {
+    max-height: 20em;
+  }
+
+  nav ul li {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 24px 0px;
+    text-align: center;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
